@@ -19,18 +19,27 @@
         <!-- HERO SECTION START -->
         <section class="hero">
             <div class="container">
-                <h2 class="mt-5">Search</h2>
-                <form class="form-js d-flex align-items-center" action="#" method="GET" autocomplete="off">
-                    <input class="form-control input-js my-5" type="search" name="search" placeholder="Search..." required>
-                    <select class="form-control form-select ms-3" name="type" id="">
-                        <option value="">Categoria</option>
-                        <option value="movie">Movie</option>
-                        <option value="series">Series</option>
-                        <option value="episode">Episode</option>
-                    </select>
-                    <button class="btn ms-3 btn-warning" type="submit">Submit</button>
+                <h2 class="mt-5">Search movie</h2>
+                <form class="form-js d-flex align-items-center row" action="#" method="GET" autocomplete="off">
+                    <div class=" col-12 col-md-4 col-lg-3">
+                        <input class="form-control input-js my-5" type="search" name="search" placeholder="Search..." required>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <select class="form-control form-select ms-md-3" name="type">
+                            <option value="">Type.</option>
+                            <option value="movie">Movie</option>
+                            <option value="series">Series</option>
+                            <option value="episode">Episode</option>
+                        </select>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-3">
+                        <input class="form-control input-year-js ms-md-3 mt-5 mt-md-0" type="number" name="search" placeholder="Year">
+                    </div>
+                    <div class=" col-12 col-md-4 col-lg-3">
+                        <button class="btn ms-lg-3 btn-primary mt-2 mt-lg-0" type="submit">Search</button>
+                    </div>
                 </form>
-                <ul class="list-js row my-5 list-unstyled justify-content-between ps-0">
+                <ul class="list-js row my-5 list-unstyled ps-0">
                     
                 </ul>
             </div>
@@ -45,7 +54,7 @@
     </footer>
     <!-- SITE FOOTER FINISH -->
     <template class="template-js">
-        <li class="col item mt-2 bg-black col-md-4 col-lg-3 ps-0" style="width: 280px;">
+        <li class="col item mt-4 bg-black col-md-4 col-lg-3 ps-0 ms-4" style="max-width: 280px; width: 100%;">
             <img class="search-img" width="280" height="250" src="" alt="">
             <p class="text-white ps-3 mt-3">Title :<span class="text-js ps-3 pt-2 "></span></p>
             <p class="text-white ps-3">Year :<span class="type ps-3 pt-2 "></span></p>
