@@ -6,8 +6,8 @@ const elList  = document.querySelector(".list-js");
 const elTemplaate  = document.querySelector(".template-js").content;
 const elFragment = document.createDocumentFragment();
 
-function renderFunc(value){
-    fetch(`http://www.omdbapi.com/?apikey=140a16dc&s=${value}`)
+function renderFunc(value, selcvalue, yearvalue){
+    fetch(`https://www.omdbapi.com/?apikey=d4ca8e84&s=${value}&type=${selcvalue}&y=${yearvalue}`)
     .then(respons => respons.json())
     .then(data => {
         movFunc(data.Search)
@@ -31,13 +31,7 @@ function movFunc(data){
 elForm.addEventListener("submit", (evt) =>{
     evt.preventDefault();
     const inputValue = elInput.value;
-    // const selctValue = elSelect.value;
-    // const inputYearValue = elInputYear.value;
-
-    // if(selctValue == "type"){
-        renderFunc(inputValue)
-    // }
-    // else{
-    //     renderFunc(inputValue, `&type=${selctValue}`, `&y=${inputYearValue}`)
-    // }
+    const selctValue = elSelect.value;
+    const inputYearValue = elInputYear.value;
+    renderFunc(inputValue, selctValue, inputYearValue)
 })
