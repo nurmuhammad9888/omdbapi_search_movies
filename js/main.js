@@ -35,7 +35,7 @@ elForm.addEventListener("submit", (evt) =>{
     // const inputYearValue = elInputYear.value;
 
     // if(selctValue == "type"){
-    //     renderFunc(inputValue, "", `&y=${inputYearValue}`)
+        renderFunc(inputValue)
     // }
     // else{
     //     renderFunc(inputValue, `&type=${selctValue}`, `&y=${inputYearValue}`)
