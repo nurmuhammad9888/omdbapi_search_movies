@@ -6,7 +6,7 @@ const elList  = document.querySelector(".list-js");
 const elTemplaate  = document.querySelector(".template-js").content;
 const elFragment = document.createDocumentFragment();
 
-function renderFunc(value, selcvalue, yearvalue){
+function renderFunc(value, selcvalue = "", yearvalue = ""){
     fetch(`http://www.omdbapi.com/?apikey=140a16dc&s=${value}&type=${selcvalue}&y=${yearvalue}`)
     .then(respons => respons.json())
     .then(data => {
